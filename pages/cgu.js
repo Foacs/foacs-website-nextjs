@@ -2,19 +2,9 @@ import Head from "next/head";
 import Link from "next/link";
 import Layout from "../components/layout";
 import Heading1 from "../components/heading1";
-import { getCgu } from "../lib/cgu";
 import Container from "../components/container";
 
-export async function getStaticProps() {
-  const cgu = await getCgu();
-  return {
-    props: {
-      cgu,
-    },
-  };
-}
-
-export default function Cgu({ cgu }) {
+export default function Cgu() {
   return (
     <>
       <Head>
@@ -31,7 +21,7 @@ export default function Cgu({ cgu }) {
               Conditions Générales d&#39;Utilisation Foacs
             </h2>
             <small className="text-gray-700 dark:text-gray-300 my-8">
-              Mis à jour: <time>15 décembre 2021</time>
+              Mis à jour: <time>18 décembre 2021</time>
             </small>
             <p className="mb-1">
               Conditions Générales d&#39;Utilisation du site web Foacs.
@@ -284,8 +274,8 @@ export default function Cgu({ cgu }) {
               français compétents.
             </p>
             <small className="text-gray-700 dark:text-gray-300 mt-5">
-              Publié le <time>{cgu.first_publish}</time> - Mis à jour le{" "}
-              <time>{cgu.last_update}</time>
+              Publié le <time>01/03/2021 </time> - Mis à jour le{" "}
+              <time>18/12/2021</time>
             </small>
           </section>
         </Container>

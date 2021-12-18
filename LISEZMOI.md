@@ -1,12 +1,12 @@
 [English version](./README.md)
 
-# foacs-repo
+# Site web de Foacs Next.js
 
-Template pour les applications foacs.
+Nouveau site wbe de Foacs website écrit avec [Next.js](https://nextjs.org)
 
 ## Licence
 
-Ce projet est sous les termes de la licence __CeCILL__.
+Ce projet est sous les termes de la licence **CeCILL**.
 
 > Vous pouvez accéder aux détails de la licence [ici](./LICENSE.md).
 

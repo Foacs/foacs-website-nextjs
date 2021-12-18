@@ -1,11 +1,12 @@
 [Version française](./LISEZMOI.md)
-# foacs-repo
 
-Template repository for foacs project
+# Foacs website Next.js
+
+New Foacs website write with [Next.js](https://nextjs.org)
 
 ## License
 
-This project is licensed under the terms of the __CeCILL__ license.
+This project is licensed under the terms of the **CeCILL** license.
 
 > You can check out the full license [here](./LICENSE.md).
 

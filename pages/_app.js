@@ -1,7 +1,16 @@
-import '../styles/globals.css'
+import { ThemeProvider } from "next-themes";
+import "../styles/globals.scss";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export function reportWebVitals(metric) {
+  console.log(metric);
 }
 
-export default MyApp
+function MyApp({ Component, pageProps }) {
+  return (
+    <ThemeProvider attribute="class">
+      <Component {...pageProps} />
+    </ThemeProvider>
+  );
+}
+
+export default MyApp;

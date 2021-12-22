@@ -3,29 +3,29 @@ import Card from "../../components/card";
 import Container from "../../components/container";
 import Heading1 from "../../components/heading1";
 import Layout from "../../components/layout";
-import { getSortedProjectsData } from "../../lib/projects";
+import { getSortedMembersData } from "../../lib/members";
 
 export async function getStaticProps() {
-  const allProjectsData = getSortedProjectsData();
+  const allMembersData = getSortedMembersData();
   return {
     props: {
-      allProjectsData,
+      allMembersData,
     },
   };
 }
 
-export default function Projects({ allProjectsData }) {
+export default function Projects({ allMembersData }) {
   return (
     <>
       <Head>
-        <title>Foacs - Projets</title>
+        <title>Foacs - Membres</title>
       </Head>
       <Layout active="projects">
         <Container>
-          <Heading1>Projets</Heading1>
+          <Heading1>Membres</Heading1>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
-            {allProjectsData.map(({ id, name, desc }) => (
-              <Card key={id} root="projects" id={id} name={name} desc={desc} />
+            {allMembersData.map(({ id, name, desc }) => (
+              <Card key={id} root="members" id={id} name={name} desc={desc} />
             ))}
           </div>
         </Container>

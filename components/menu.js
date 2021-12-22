@@ -3,6 +3,7 @@ import cn from "classnames";
 import { darkMode } from "../tailwind.config";
 import Layout from "./layout";
 import MenuItem from "./menuItem";
+import Script from "next/script";
 
 export default function Menu({ theme, switchTheme }) {
   return (
@@ -10,13 +11,16 @@ export default function Menu({ theme, switchTheme }) {
       <nav className="flex flex-wrap bg-white dark:bg-gray-800 shadow-lg items-center justify-between p-4 text-2  text-gray-800 dark:text-gray-200">
         <div className="lg:order-2 w-auto lg:w-1/5 lg:text-center">
           <Link href="/">
-            <a className="text-xl  font-semibold font-heading hover:text-green-700 dark:hover:text-green-200">
+            <a className="text-xl font-semibold font-heading hover:text-green-700 dark:hover:text-green-200">
               Foacs
             </a>
           </Link>
         </div>
         <div className="block lg:hidden">
-          <button className="navbar-burger flex items-center py-2 px-3 text-indigo-500 rounded border border-indigo-500">
+          <button
+            id="burger-menu-button"
+            className="navbar-burger flex items-center py-2 px-3 text-indigo-500 rounded border border-indigo-500"
+          >
             <svg
               className="fill-current h-3 w-3"
               viewBox="0 0 20 20"
@@ -27,7 +31,10 @@ export default function Menu({ theme, switchTheme }) {
             </svg>
           </button>
         </div>
-        <div className="navbar-menu hidden lg:order-1 lg:block w-full lg:w-2/5">
+        <div
+          id="burger-menu"
+          className="navbar-menu hidden lg:order-1 lg:block w-full lg:w-2/5"
+        >
           <MenuItem href="/">Accueil</MenuItem>
           <MenuItem href="/projects">Projets</MenuItem>
           <MenuItem href="/knowledge">Connaissances</MenuItem>
@@ -83,6 +90,14 @@ export default function Menu({ theme, switchTheme }) {
           <MenuItem href="/login">Profile</MenuItem>
         </div>
       </nav>
+      <Script id="show-burger-menu" strategy="afterInteractive">
+        {`
+        const menu = document.getElementById("burger-menu");
+        document.getElementById("burger-menu-button").addEventListener("click", () => {
+          menu.classList.toggle("hidden")
+        })
+        `}
+      </Script>
     </header>
   );
 }

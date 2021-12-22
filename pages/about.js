@@ -21,7 +21,7 @@ export default function About() {
                 target="_blank"
                 rel="noreferrer"
                 title="Article gouvernemental sur les associations de fait"
-                className="text-green-500"
+                className="text-green-700 dark:text-green-300"
               >
                 assocation &#34;de fait&#34;
               </a>{" "}
@@ -29,10 +29,11 @@ export default function About() {
               numériques libres (
               <a
                 href="https://opensource.org"
+                hrefLang="en"
                 target="_blank"
                 rel="noreferrer"
                 title="Site de l'OpenSource initiative (en anglais)"
-                className="text-green-500"
+                className="text-green-700 dark:text-green-300"
               >
                 (en)open source
               </a>

@@ -1,10 +1,11 @@
 import fs from "fs";
 import { getAllProjectIds } from "../lib/projects";
+import { getAllMemberIds } from "../lib/members";
 
 export function getServerSideProps({ res }) {
   const baseUrl = {
     development: "http://localhost:3000",
-    production: "https://foacs.fr",
+    production: "http://v2.foacs.ovh:6030",
   }[process.env.NODE_ENV];
 
   const staticPages = fs
@@ -27,6 +28,7 @@ export function getServerSideProps({ res }) {
     });
 
   const projectIds = getAllProjectIds();
+  const memberIds = getAllMemberIds();
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -42,14 +44,26 @@ export function getServerSideProps({ res }) {
           `;
         })
         .join("")}
-        ${projectIds.map(({ params }) => {
-          return `<url>
+        ${projectIds
+          .map(({ params }) => {
+            return `<url>
               <loc>${baseUrl}/projects/${params.id}</loc>
               <lastmod>${new Date().toISOString()}</lastmod>
               <changefreq>monthly</changefreq>
               <priority>1.0</priority>
             </url>`;
-        })}
+          })
+          .join("")}
+        ${memberIds
+          .map(({ params }) => {
+            return `<url>
+              <loc>${baseUrl}/members/${params.id}</loc>
+              <lastmod>${new Date().toISOString()}</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>1.0</priority>
+            </url>`;
+          })
+          .join("")}
     </urlset>
   `;
 

@@ -21,7 +21,7 @@ export default function Cgu() {
               Conditions Générales d&#39;Utilisation Foacs
             </h2>
             <small className="text-gray-700 dark:text-gray-300 my-8">
-              Mis à jour: <time>18 décembre 2021</time>
+              Mis à jour: <time>22 décembre 2021</time>
             </small>
             <p className="mb-1">
               Conditions Générales d&#39;Utilisation du site web Foacs.
@@ -46,8 +46,8 @@ export default function Cgu() {
               &#34;de fait&#34; Foacs.
             </p>
             <p className="mb-1">
-              L&#39;hébergement du site web est assuré par la société OVH, sise
-              au 2 rue Kellermann - 59100 Roubaix - France.
+              L&#39;hébergement du site web est assuré par la société OUIHEBERG
+              SARL, sise au 22 rue du muscat - 30470 AIMARGUES - France.
             </p>
             <hr />
             <h3

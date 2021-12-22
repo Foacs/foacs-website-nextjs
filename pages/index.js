@@ -25,8 +25,8 @@ export default function Home() {
         <section className="container mx-auto px-6 p-10 dark:text-white">
           <div className="flex items-center flex-wrap mb-20">
             <div className="w-full md:w-1/2">
-              <h4 className="text-3xl font-bold mb-3">Open source</h4>
-              <p className="mb-8">
+              <h3 className="text-3xl font-bold mb-3">Open source</h3>
+              <p className="mb-8 text-justify">
                 Foacs s&apos;est donnée comme objectif de mettre ses compétences
                 au service du plus grand nombre. Elle met son expertise à
                 disposition des autres par le biais de travaux open source.
@@ -39,12 +39,12 @@ export default function Home() {
                 href="https://opensource.org/"
                 target="_blank"
                 rel="noreferrer"
-                className="flex justify-center"
+                className="flex justify-center z-0"
               >
                 <Image
                   src="https://opensource.org/files/OSI_Standard_Logo.svg"
                   alt="Logo open source initiative"
-                  width={206}
+                  width={110}
                   height={150}
                 />
               </a>
@@ -57,7 +57,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex items-center flex-wrap mb-20">
-            <div className="w-full md:w-1/2 flex justify-center">
+            <div className="w-1/2 hidden md:flex justify-center">
               <Image
                 src="/images/idea.svg"
                 alt="Logo idée"
@@ -66,8 +66,8 @@ export default function Home() {
               />
             </div>
             <div className="w-full md:w-1/2">
-              <h4 className="text-3xl font-bold mb-3">Soutenir</h4>
-              <p>
+              <h3 className="text-3xl font-bold mb-3">Soutenir</h3>
+              <p className="text-justify">
                 Foacs se donne pour objectif de soutenir les idées de projet.
                 Chaque initiative est dument étudiée pour apporter le soutien
                 nécessaire. Foacs tente d&apos;apporter son expertise et ses
@@ -76,11 +76,19 @@ export default function Home() {
                 idées.
               </p>
             </div>
+            <div className="w-full md:hidden mt-4 flex justify-center">
+              <Image
+                src="/images/idea.svg"
+                alt="Logo idée"
+                width={206}
+                height={150}
+              />
+            </div>
           </div>
           <div className="flex items-center flex-wrap mb-20">
             <div className="w-full md:w-1/2">
-              <h4 className="text-3xl font-bold mb-3">Partager</h4>
-              <p className="mb-8">
+              <h3 className="text-3xl font-bold mb-3">Partager</h3>
+              <p className="mb-8 text-justify">
                 Profiter de nos savoirs tout en partageant les vôtres. Notre
                 volonté est de partager les connaissances et de faire de Foacs
                 un pôle de savoir. Ainsi, nous souhaitons offrir la posibilité

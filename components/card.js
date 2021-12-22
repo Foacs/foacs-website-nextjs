@@ -16,9 +16,9 @@ export default function Card({ children, root, id, name, desc }) {
             />
             <div className="flex items-end grow w-full">
               <div className="px-5 py-3">
-                <h3 className="text-gray-700 dark:text-gray-300 uppercase">
+                <h2 className="text-gray-700 dark:text-gray-300 uppercase">
                   {name}
-                </h3>
+                </h2>
                 <span className="text-gray-500 dark:text-gray-50 mt-2">
                   {desc}
                 </span>

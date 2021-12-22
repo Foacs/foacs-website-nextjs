@@ -7,11 +7,11 @@ export default function Footer() {
         <div className="flex flex-col">
           <div className="md:hidden mt-7 mx-auto w-11 h-px rounded-full" />
           <div className="mt-4 md:mt-0 flex flex-col md:flex-row">
-            <nav className="flex-1 flex flex-col items-center justify-center md:items-end md:border-r border-gray-100 md:pr-5">
+            <nav className="flex-1 flex flex-row md:flex-col items-center justify-center md:items-end md:border-r border-gray-100 md:pr-5">
               <Link href="/sitemap.xml">
                 <a
                   aria-current="page"
-                  className="hover:text-green-700 dark:hover:text-green-200"
+                  className="hover:text-green-700 dark:hover:text-green-200 my-1"
                 >
                   Sitemap
                 </a>
@@ -19,7 +19,7 @@ export default function Footer() {
               <Link href="/contact">
                 <a
                   aria-current="page"
-                  className="hover:text-green-700 dark:hover:text-green-200"
+                  className="hover:text-green-700 dark:hover:text-green-200 my-1 mx-3 md:mx-0"
                 >
                   Contact
                 </a>
@@ -27,16 +27,19 @@ export default function Footer() {
               <Link href="/cgu">
                 <a
                   aria-current="page"
-                  className="hover:text-green-700 dark:hover:text-green-200"
+                  className="hover:text-green-700 dark:hover:text-green-200 w-12 my-1 text-right"
                 >
                   CGU
                 </a>
               </Link>
             </nav>
-            <div className="md:hidden mt-4 mx-auto w-11 h-px rounded-full" />
             <div className="mt-4 md:mt-0 flex-1 flex items-center justify-center md:border-r border-gray-100">
               <Link href="https://github.com/Foacs">
-                <a className="hover:text-primary-gray-20">
+                <a
+                  className="hover:text-primary-gray-20"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <span className="sr-only">GitHub</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +54,11 @@ export default function Footer() {
                 </a>
               </Link>
               <Link href="https://discord.gg/VWX9pybWvT">
-                <a className="ml-4 hover:text-primary-gray-20">
+                <a
+                  className="ml-4 hover:text-primary-gray-20"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <span className="sr-only">Discord</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -66,13 +73,13 @@ export default function Footer() {
                 </a>
               </Link>
             </div>
-            <div className="md:hidden mt-4 mx-auto w-11 h-px rounded-full" />
             <div className="mt-7 md:mt-0 flex-1 flex flex-col items-center justify-center md:items-start md:pl-5">
               <span>Copyright © 2021 Foacs.</span>
               <span className="mt-7 md:mt-1">
                 Icones faites par{" "}
                 <a
                   href="https://www.freepik.com"
+                  hrefLang="en"
                   rel="noreferrer"
                   target="_blank"
                   title="Freepik"
@@ -83,6 +90,7 @@ export default function Footer() {
                 de{" "}
                 <a
                   href="https://www.flaticon.com/"
+                  hrefLang="en"
                   rel="noreferrer"
                   target="_blank"
                   title="Flaticon"
